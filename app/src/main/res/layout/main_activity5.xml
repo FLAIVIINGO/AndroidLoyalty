@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity5"
+    android:stretchColumns="1,2"
+    android:layout_margin="8dp">
+
+    <TextView
+        android:layout_height="32dp"
+        android:layout_width="match_parent"
+        android:text="Select Prize ID"
+        android:gravity="center"/>
+
+    <Spinner
+        android:id="@+id/prize_spin"
+        android:layout_height="32dp"
+        android:layout_width="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prizeids"/>
+
+    <TextView
+        android:id="@+id/prizeids"
+        android:layout_height="32dp"
+        android:layout_width="match_parent"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_height="32dp"
+        android:layout_width="match_parent"
+        android:text="Prize Desc."
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/prize_desc"
+        android:layout_height="32dp"
+        android:layout_width="match_parent"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_height="32dp"
+        android:layout_width="match_parent"
+        android:text="Points Needed"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/points_need"
+        android:layout_height="32dp"
+        android:layout_width="match_parent"
+        android:gravity="center"/>
+
+</TableLayout>

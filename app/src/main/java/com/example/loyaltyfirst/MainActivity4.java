@@ -90,16 +90,12 @@ public class MainActivity4 extends AppCompatActivity {
 
         queue = Volley.newRequestQueue(MainActivity4.this);
         String url = "http://10.0.2.2:8080/loyaltyfirst/TransactionDetails.jsp?tref="+tref;
-        if(tref.equals("11")) {
-            set11();
-        }
+
         StringRequest request =new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String s) {
                 String str = s.trim();
-                if(tref.equals("11")) {
-                    set11();
-                }
+                tListModel2.clear();
                 List<String> input_list = Arrays.asList(str.split("#"));
                 for(int i = 0; i < input_list.size(); i++) {
                     List<String> row = Arrays.asList(input_list.get(i).split(","));
@@ -110,10 +106,6 @@ public class MainActivity4 extends AppCompatActivity {
             }
         },null);
         queue.add(request);
-    }
-
-    public void set11() {
-        return;
     }
 
     public void setRecyclerView() {
