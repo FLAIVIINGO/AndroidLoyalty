@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity4"
+    android:stretchColumns="1,2,3"
+    android:layout_margin="8dp">
+
+    <TextView
+        android:layout_height="32dp"
+        android:layout_width="match_parent"
+        android:text="Select Transactions"
+        android:gravity="center"/>
+
+    <Spinner
+        android:id="@+id/tref_spin"
+        android:layout_height="32dp"
+        android:layout_width="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trefs"/>
+
+    <TextView
+        android:id="@+id/trefs"
+        android:layout_height="32dp"
+        android:layout_width="match_parent"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp">
+        <TextView
+            android:id="@+id/trans_date"
+            android:layout_height="32dp"
+            android:layout_width="wrap_content"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/trans_points"
+            android:layout_height="32dp"
+            android:layout_width="wrap_content"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <TableRow>
+        <TextView
+            android:text="Prod. Name"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_column="1"/>
+        <TextView
+            android:text="Quantity"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_column="1"/>
+        <TextView
+            android:text="Points"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_column="1"/>
+    </TableRow>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</TableLayout>
