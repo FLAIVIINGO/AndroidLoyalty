@@ -57,13 +57,22 @@ public class MainActivity2 extends AppCompatActivity {
             }
         });
         queue.add(request);
-        if(value.equals("1")) {
+        if(value.equals("19")) {
             imageView.setImageResource(R.drawable.cid1);
             //textView.setText("Frank Wyatt");
         }
         else if(value.equals("2")) {
             imageView.setImageResource(R.drawable.cid2);
             //textView.setText("Briley Wyatt");
+        }
+        else if(value.equals("8")) {
+            imageView.setImageResource(R.drawable.cid3);
+        }
+        else if(value.equals("14")) {
+            imageView.setImageResource(R.drawable.cid4);
+        }
+        else if(value.equals("13")) {
+            imageView.setImageResource(R.drawable.cid5);
         }
         button.setOnClickListener(new View.OnClickListener() {
             @Override

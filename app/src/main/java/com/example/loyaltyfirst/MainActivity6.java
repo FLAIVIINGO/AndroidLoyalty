@@ -92,7 +92,7 @@ public class MainActivity6 extends AppCompatActivity {
         StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String s) {
-                Toast.makeText(MainActivity6.this,"Points Added", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity6.this,"Points "+certain_num_points+ "to family " + family_id, Toast.LENGTH_LONG).show();
             }
         },null);
         queue.add(request);
@@ -113,7 +113,7 @@ public class MainActivity6 extends AppCompatActivity {
                 TransactionModel4 mod4 = new TransactionModel4(row.get(0),row.get(1),row.get(2));
                 txn_points.setText(mod4.getTotal_points());
                 fam_id.setText(mod4.getFamily_id());
-                fam_percent.setText(mod4.getPercent_points());
+                fam_percent.setText("30");
                 family_id = mod4.getFamily_id();
                 certain_num_points = mod4.getPercent_points();
             }
