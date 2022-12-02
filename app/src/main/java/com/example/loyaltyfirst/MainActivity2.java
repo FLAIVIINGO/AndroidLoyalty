@@ -33,6 +33,8 @@ public class MainActivity2 extends AppCompatActivity {
         final Button button = findViewById(R.id.button7);
         final Button button2 = findViewById(R.id.button3);
         final Button button3 = findViewById(R.id.button4);
+        final Button button4 = findViewById(R.id.button5);
+        final Button button5 = findViewById(R.id.button6);
 
         RequestQueue queue = Volley.newRequestQueue(MainActivity2.this);
         String url = "http://10.0.2.2:8080/loyaltyfirst/Info.jsp?cid="+value;
@@ -84,6 +86,21 @@ public class MainActivity2 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity2.this,MainActivity5.class);
                 intent.putExtra("cid",value);
+                startActivity(intent);
+            }
+        });
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity2.this,MainActivity6.class);
+                intent.putExtra("cid",value);
+                startActivity(intent);
+            }
+        });
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity2.this,MainActivity.class);
                 startActivity(intent);
             }
         });

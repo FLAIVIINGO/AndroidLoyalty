@@ -52,4 +52,27 @@
         android:layout_width="match_parent"
         android:gravity="center"/>
 
+    <TableRow>
+        <TextView
+            android:text="Redemption Date"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_column="1"/>
+        <TextView
+            android:text="Exchange Center"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_column="1"/>
+
+    </TableRow>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/prize_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 </TableLayout>
